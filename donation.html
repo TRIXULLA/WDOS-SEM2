@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <meta name="description" content="Home page">
+        <title>DONATE AND PURCHASE</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="style.css">
+        <style>.formstyle{
+            display: flex;
+            height: 140vh;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://miro.medium.com/max/1200/1*rTsTL0lK5KAN8Nlnhty6Xg.jpeg");
+        }
+        .donationform{
+            max-width: 500px;
+            width: 100%;
+            background:white;
+            padding: 30px 30px;
+            border-radius: 10px;
+        }
+        .heading{
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+            color:white ;
+        }
+        
+        .donationform form .donatedetails{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:flex-end;
+            margin: 20px 0 12px o;
+        }
+        form .donatedetails .inputbox{
+         width: calc(100%/2 - 20px);
+         margin-bottom: 10px;
+        }
+        .donatedetails .inputbox input{
+            height: 26px;
+            width: 370px; 
+            outline:none ;
+            border-radius: 5px;
+            border: #0e2433 solid;
+            padding-left: 6px;
+            font-size: 15px;
+        }
+        .donatedetails .inputbox input:focus,
+        .donatedetails .inputbox input:valid{
+            border-color: black ;
+        }
+        input[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: blue;
+  color:white;
+
+}
+        
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+               TABROBANA
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+               <li><a  href="index.html">Home</a></li>
+               <li><a href="2.Wildlife.html">WILDLIFE</a></li>
+               <li><a href="3.beaches.html">BEACHES</a></li>
+               <li><a href="4.Activities.html">ACTIVITIES</a></li>
+               <li><a href="5.Heritages.html">HERITAGES</a></li>
+               <li><a class="active" href="6.Donate.html">DONATE AND PURCHASE</a></li>
+            </ul>
+         </nav>
+          <main>
+            <div class="container1">
+                <img src="HOMEPAGE1.webp" alt="Norway" style="width:100%;">
+                <div class="text-block">
+                  <h4>Nature</h4>
+                  <p>What a beautiful sunrise</p>
+                </div>
+              </div>
+              <form class="formstyle" onsubmit="myfunc(event)">
+                <div class="heading">DONATE FOR A BETTERTOMORROW.<br>
+                    THANK YOU FOR YOUR DONATION <br>
+                    ON BEHALF OF THE <br>
+                    BETTERMENT OF SRI LANKA</div>
+                 <div class="donationform">
+                    <div class="donatedetails">
+                        <br><div class="inputbox">
+                            <label>ENTER FIRST NAME:</label>
+                            <input type="text" id="name" required/>
+                       </div><br>
+                       <div class="inputbox">
+                            <label>DATE OF BIRTH:</label>
+                           <input type="date" id="birthdate" required/>
+                       </div><br>
+                       <div class="inputbox">
+                            <label>ENTER EMAIL ADDRESS</label>
+                           <input type="email" id="email" required/>
+                       </div> <br>
+                        <div class="inputbox">
+                            <label>ENTER PHONE NUMBER:</label>
+                            <input type="number" id="mobile" required/>
+                       </div>  <br>
+                       <div class="inputbox">
+                        <label>ENTER CARD HOLDERS NAME:</label>
+                        <input type="text" id="cardname" required/>
+                       </div>  <br>
+                       <div class="inputbox">
+                        <label>ENTER CARD NUMBER:</label>
+                        <input type="number" id="cardnumber" required/>
+                       </div>  <br>
+                       <div class="inputbox">
+                        <label>ENTER CVV NUMBER:</label>
+                        <input type="number" id="cvv" required/>
+                       </div>  <br>
+                       <div class="formbutton">
+                        
+                       </div>
+                        <br><input type="submit" value="SUBMIT" onclick="(function() { alert('Thank you for your donation') })()">
+                    </div>
+               
+                 </div>          
+                </form>
+                <script>function myfunc(event) {
+                    event.preventDefault();
+                
+                    var name = document.getElementById("name").value;
+                    var birthdate= document.getElementById("birthdate").value;
+                    var email = document.getElementById("email").value;
+                    var mobile = document.getElementById("mobile").value;
+                    var cardname = document.getElementById("cardname").value;
+                    var cardnumber = document.getElementById("cardnumber").value;
+                    var cvv = document.getElementById("cvv").value;
+                
+                    localStorage.setItem('Is_name', name);
+                    localStorage.setItem('Is_birthdate', birthdate);
+                    localStorage.setItem('Is_email', email);
+                    localStorage.setItem('Is_mobile', mobile);
+                    localStorage.setItem('Is_cardname', cardname);
+                    localStorage.setItem('Is_cardnumber', cardnumber);
+                    localStorage.setItem('Is_cvv', cvv);
+                
+                    
+                }</script>
+                </main>
+                </body>
+                </html>

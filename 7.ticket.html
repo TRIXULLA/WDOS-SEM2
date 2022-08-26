@@ -1,0 +1,920 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <meta name="description" content="Home page">
+        <title>Tickets</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Permanent+Marker&display=swap');
+
+@font-face {
+    font-family: '';
+    src: url('6ba89d439311e87b18f6096c1b2a8263.woff2') format('woff2'),
+        url('6ba89d439311e87b18f6096c1b2a8263.woff') format('woff'),
+        url('6ba89d439311e87b18f6096c1b2a8263.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+/* Remove Defaults */
+*{
+    box-sizing: border-box;
+}
+.opacity{
+    opacity: 0.8;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo', sans-serif;
+    overflow-x: hidden;
+}
+
+ul{
+    list-style-type: none;
+}
+.bold{
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* colors */
+.orange{
+    color: blue !important;
+}
+
+.red{
+    color: rgba(156,28,30,255);
+    font-weight: 500;
+}
+
+.btn{
+    display: inline-block;
+    padding: 2% 5%;
+    background-color: blue;
+    font-size: 1.2vw;
+    color: white;
+    
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  /* Container holding the image and the text */
+.container1{
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+}
+/*NAV*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.header-content h3{
+    font-size: 3vw;
+}
+.header-content h1{
+    font-family: '';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 9vw;
+}
+
+
+
+
+@media (max-width:800px) {
+
+    .nav-logo a{
+        font-size: 6vw;
+        top: 0;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .nav-ul{
+        display: none;
+    }
+    .nav-ul li{
+        font-size: 2.5vw;
+    }
+   .links a{
+        font-size: 2.5vw;
+    }
+    .links li{
+        margin: 4px 0;
+    }
+    .dropdown{
+        padding: 0;
+        font-size: 5vw;
+    }
+    .ham-menu{
+        display: flex;
+        justify-content: center;
+        color: white;
+        padding-top: 20px;
+    }
+
+    /* header-content(mobile) */
+    .header-content h3{
+        font-size: 5vw;
+    }
+    .header-content h1{
+        font-size: 13vw;
+    }
+
+    
+    .btn{
+        font-size: 2.5vw;
+    }
+
+    .remove{
+        display: none;
+    }
+
+}
+
+.activities-heading{
+    font-size: 3vw;
+    padding-left: 10px;
+}
+
+header{
+    background: url('https://static01.nyt.com/images/2019/02/03/travel/03frugal-srilanka01/merlin_148552275_74c0d250-949c-46e0-b8a1-e6d499e992cf-superJumbo.jpg') !important;
+    background-position: center -200px !important;
+ 
+}
+
+
+.activities-introduction{
+    font-size: 1.2vw;
+    margin-bottom: 50px;
+    opacity: 0.9;
+    padding-left: 10px;
+}
+
+
+.section-1, .section-2, .section-3, .heritage-locations{
+    width: 100%;
+    margin: 30px 0;
+}
+
+.content-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content-image{
+    justify-self: end;
+}
+
+.content-image img{
+    height: 50vw;
+}
+
+
+.content-text{
+    align-self: center;
+}
+
+.content-text div{
+    padding: 20px;
+}
+
+.content-text div h1{
+    font-size: 3vw;
+}
+
+.content-text div p{
+    font-size: 1.2vw;
+}
+
+.section-2 .content-text ul{
+    list-style-type: disc;
+    font-size: 1.2vw;
+}
+
+.section-3 .content-text ol{
+    font-size: 1.2vw;
+}
+
+.heritage-locations{
+    padding-top: 50px;
+}
+.card-wrapper{
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-evenly;
+ 
+}
+
+
+.card{
+    display: inline-block;
+    margin-bottom: 20px;
+    max-width: 25vw;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card img{
+    width: 25vw;
+    border-radius: 10px;
+}
+
+.card-content{
+    padding:30px 10px;
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+@media (max-width:800px){
+    .content-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .content-image{
+        justify-self: center;
+    }
+    .content-image img{
+        height: 75vw;
+    }
+    .content-text div h1{
+        font-size: 7vw;
+    }
+    
+    .content-text div p{
+        font-size: 2.8vw;
+    }
+    .section-2 .content-text ul{
+        font-size: 2.8vw;
+    }
+    .section-2 .content-text{
+        grid-row-start: 2;
+
+    }
+    .section-3 .content-text ol{
+        font-size: 2.8vw;
+    }
+
+    .activities-heading{
+        font-size: 7vw;
+    }
+    
+    
+    .activities-introduction{
+        font-size: 2.8vw;
+    }
+
+    .card-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        max-width: 35vw;
+        min-width: 175px;
+    }
+
+    .card img{
+        width: 35vw;
+        min-width: 175px;
+    }
+
+    .card-content{
+        font-size: 2.8vw;
+    }
+    
+}
+
+
+
+
+        .small {
+            font-size: 14px;
+        }
+
+        .ticket-form {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .order-list {
+            display: flex;
+            padding: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .order-list-overall {
+            display: flex;
+            padding: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .formstyle {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr;
+
+        }
+
+        .formstyle div:nth-child(4) {
+            margin-bottom: 50px;
+        }
+
+        input {
+            width: 100%;
+            background-color: unset;
+            opacity: 1;
+            border: 1px black solid;
+            height: 100%;
+        }
+
+        input:last-of-type {
+            height: auto;
+        }
+
+        input::placeholder {
+            color: #ffffff;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        select,
+        option {
+            background-color: transparent;
+            height: 100%;
+        }
+
+        select option {
+            margin: 40px;
+            background: transparent;
+            color: black;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            border-radius: unset;
+        }
+
+        .formstyle div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+        }
+
+        .formstyle label {
+            padding: 5px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid blue;
+  }
+  
+  .btn:hover {
+    background-color: blue;
+    color: white;
+  }
+
+        .ticket-heading {
+            padding-bottom: 20px;
+        }
+
+        @media (max-width:500px) {
+            .formstyle div {
+                grid-template-columns: 1fr;
+            }
+
+            .formstyle label,
+            option {
+                text-align: center;
+            }
+
+            .order-list {
+                flex-direction: column;
+            }
+
+            .order-list-overall {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Mobile-full-screen-nav-bar -->
+    <header>
+        <div class="container">
+            <nav>
+                <body>
+                    <nav>
+                        <div class="logo">
+                           TABROBANA
+                        </div>
+                        <label for="click" class="menu-btn">
+                        <i class="fas fa-bars"></i>
+                        </label>
+                        <ul>
+                           <li><a  href="index.html">HOME</a></li>
+                           <li><a  href="2.Wildlife.html">WILDLIFE</a></li>
+                           <li><a  href="3.beaches.html">BEACHES</a></li>
+                           <li><a class="active" href="4.Activities.html">ACTIVITIES</a></li>
+                           <li><a href="5.Heritages.html">HERITAGES</a></li>
+                           <li><a href="6.Donate.html">DONATE AND PURCHASE</a></li>
+                        </ul>
+                     </nav>
+                      <main>
+
+    </header>
+    <div class="ticket-form">
+        <h1 class="ticket-heading"><span class="orange">Ticket</span> Booking</h1>
+        <form action="javascript:void(0)" onchange="updateInfo()" class="formstyle">
+            <div>
+                <label for="pass">Select Pass:</label>
+                <select name="pass" id="pass">
+                    <option value="-">Select Pass</option>
+                    <option value="Foreign Adult Pass">Foreign Adult Pass</option>
+                    <option value="Foreign Child Pass">Foreign Child Pass</option>
+                    <option value="Local Adult Pass">Local Adult Pass</option>
+                    <option value="Local Child Pass">Local Child Pass</option>
+                    <option value="Annual Pass-Local">Annual Pass-Local</option>
+                    <option value="Annual Pass-Foreign">Annual Pass-Foreign</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="number">Quantity Required:</label>
+                <input type="number" id="num">
+            </div>
+
+            <div>
+                <label for="pass">Duration:</label>
+                <select name="duration" id="duration">
+                    <option value="-">Select Duration</option>
+                    <option value="3 Hours">3 Hours</option>
+                    <option value="1/2 Day">1/2 Day</option>
+                    <option value="Full Day">Full Day</option>
+                    <option value="2 Days">2 Days</option>
+                </select>
+            </div>
+            <div>
+
+                <label for="foodtoken">Food Token</label>
+                <input type="checkbox" id="foodtoken" value="foodtoken">
+            </div>
+
+
+            <div class="buttons">
+                <button class="btn" onclick="addOrder()">Add to order</button>
+                <button class="btn" onclick="placeOrder()">Place order</button>
+                <button class="btn" onclick="addFavourite()">Add to Favorites</button>
+                <button class="btn" onclick="orderFavourite()">Order Favorites</button>
+                <button class="btn" onclick="checkLoyalty()">Check Loyalty</button>
+            </div>
+            <p class="small">*Note: For children under age 3, entrance is free.</p>
+        </form>
+
+        <h1><span class="orange">Current</span> Order:</h1>
+        <ul class="order-list">
+            <li id="displaypass">-</li>
+            <li id="displayquantity">-</li>
+            <li id="displayduration">- </li>
+            <li id="displayfoodtoken">-</li>
+            <li id="displaycost">0</li>
+        </ul>
+
+        <h1><span class="orange">Overall</span> Order:</h1>
+        <div class="overall-order">
+            <div class="overall-order-list">
+
+            </div>
+            <div class="total bold">
+                <ul class="order-list">
+                    <li>Total</li>
+                    <li id="total">0</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <script src="./script.js"></script>
+
+    <script>
+        let currentitem = {
+            pass: '-',
+            quantity: 0,
+            duration: 0,
+            foodtoken: '-',
+            cost: 0
+        };
+
+        let totalCost = 0;
+
+        function updateInfo() {
+            currentCost = 0;
+            let foodtokenval = 0;
+            let pass = document.querySelector('#pass').value;
+            let quantity = document.querySelector('#num').value;
+            let duration = document.querySelector('#duration').value;
+            let foodtoken = document.querySelector('#foodtoken');
+
+
+            // check cost
+
+            // annualpass
+            if ((pass == 'Annual Pass-Local') || (pass == 'Annual Pass-Foreign')) {
+                if (pass == 'Annual Pass-Local') {
+                    currentCost = (4500) * quantity;
+                    document.querySelector('#displayduration').innerHTML = '-';
+                    foodtoken.checked = false;
+
+                } else {
+                    currentCost = (15000) * quantity;
+                    document.querySelector('#displayduration').innerHTML = '-';
+                    foodtoken.checked = false;
+                }
+            }
+
+            // 3hours
+            if ((pass == 'Local Adult Pass' && duration == '3 Hours') || (pass == 'Local Child Pass' && duration ==
+                    '3 Hours')) {
+                if (pass == 'Local Adult Pass') {
+                    currentCost = (1000 + foodtokenval) * quantity;
+                } else {
+                    currentCost = (500 + foodtokenval) * quantity;
+                }
+            }
+            if ((pass == 'Foreign Adult Pass' && duration == '3 Hours') || (pass == 'Foreign Child Pass' && duration ==
+                    '3 Hours')) {
+                if (pass == 'Foreign Adult Pass') {
+                    currentCost = (5000 + foodtokenval) * quantity;
+                } else {
+                    currentCost = (2500 + foodtokenval) * quantity;
+                }
+            }
+
+            // 1/2hours
+            if ((pass == 'Local Adult Pass' && duration == '1/2 Day') || (pass == 'Local Child Pass' && duration ==
+                    '1/2 Day')) {
+                if (pass == 'Local Adult Pass') {
+                    currentCost = (1000 + foodtokenval + 250) * quantity;
+                } else {
+                    currentCost = (500 + foodtokenval + 250) * quantity;
+                }
+            }
+            if ((pass == 'Foreign Adult Pass' && duration == '1/2 Day') || (pass == 'Foreign Child Pass' && duration ==
+                    '1/2 Day')) {
+                if (pass == 'Foreign Adult Pass') {
+                    currentCost = (5000 + foodtokenval + 500) * quantity;
+                } else {
+                    currentCost = (2500 + foodtokenval + 500) * quantity;
+                }
+            }
+
+            // full day
+            if ((pass == 'Local Adult Pass' && duration == 'Full Day') || (pass == 'Local Child Pass' && duration ==
+                    'Full Day')) {
+                if (pass == 'Local Adult Pass') {
+                    currentCost = (1000 + foodtokenval + 500) * quantity;
+                } else {
+                    currentCost = (500 + foodtokenval + 500) * quantity;
+                }
+            }
+            if ((pass == 'Foreign Adult Pass' && duration == '1/2 Day') || (pass == 'Foreign Child Pass' && duration ==
+                    'Full Day')) {
+                if (pass == 'Foreign Adult Pass') {
+                    currentCost = (5000 + foodtokenval + 1000) * quantity;
+                } else {
+                    currentCost = (2500 + foodtokenval + 1000) * quantity;
+                }
+            }
+
+
+
+
+            // Auto-update Values
+            if (pass) {
+                document.querySelector('#displaypass').innerHTML = pass;
+            }
+            if (quantity > 0) {
+                document.querySelector('#displayquantity').innerHTML = quantity;
+            } else {
+                document.querySelector('#displayquantity').innerHTML = '-';
+            }
+            if (duration) {
+                document.querySelector('#displayduration').innerHTML = duration;
+                currentitem.duration = duration;
+            }
+            if (foodtoken.checked) {
+                document.querySelector('#displayfoodtoken').innerHTML = 'Food provided';
+                currentitem.foodtoken = 'Food Provided';
+                currentCost = currentCost + 500;
+            } else {
+                document.querySelector('#displayfoodtoken').innerHTML = '-';
+                currentitem.foodtoken = '-';
+            }
+            if (currentCost > 0) {
+                document.querySelector('#displaycost').innerHTML = currentCost;
+            } else {
+                document.querySelector('#displaycost').innerHTML = '-';
+            }
+
+            // 
+            if (pass == 'Annual Pass-Local' || pass == 'Annual Pass-Foreign') {
+                document.querySelector('#displayduration').innerHTML = '-';
+                currentitem.duration = '-';
+                foodtoken.checked = false;
+            }
+
+
+
+            // disable inputs based on pass
+            if (pass == "Annual Pass-Local" || pass == 'Annual Pass-Foreign') {
+                document.querySelector('#duration').disabled = true;
+                document.querySelector('#foodtoken').disabled = true;
+            } else {
+                document.querySelector('#duration').disabled = false;
+                document.querySelector('#foodtoken').disabled = false;
+            }
+
+            currentitem.pass = pass;
+            currentitem.quantity = quantity;
+            currentitem.cost = currentCost;
+
+        }
+
+        function addOrder() {
+            document.querySelector('#displaypass').innerHTML = '-';
+            document.querySelector('#displayquantity').innerHTML = '-';
+            document.querySelector('#displayduration').innerHTML = '-';
+            document.querySelector('#displayfoodtoken').innerHTML = '-';
+            document.querySelector('#displaycost').innerHTML = '0';
+
+
+
+            let pass = document.querySelector('#pass').value;
+            let quantity = document.querySelector('#num').value;
+            if (pass !== '-' && quantity) {
+                totalCost = totalCost + currentitem.cost;
+                document.querySelector('#total').innerHTML = totalCost;
+                let ul = document.createElement('ul');
+                ul.setAttribute('class', 'order-list-overall');
+
+                let li1 = document.createElement('li');
+                li1.appendChild(document.createTextNode(currentitem.pass))
+                ul.appendChild(li1);
+
+                let li2 = document.createElement('li');
+                li2.appendChild(document.createTextNode(currentitem.quantity));
+                ul.appendChild(li2);
+
+                let li3 = document.createElement('li');
+                li3.appendChild(document.createTextNode(currentitem.duration));
+                ul.appendChild(li3);
+
+                let li4 = document.createElement('li');
+                li4.appendChild(document.createTextNode(currentitem.foodtoken));
+                ul.appendChild(li4);
+
+                let li5 = document.createElement('li');
+                li5.appendChild(document.createTextNode(currentitem.cost))
+                ul.appendChild(li5);
+
+                document.querySelector('.overall-order-list').appendChild(ul)
+            } else {
+                window.alert('Please fill in the fields in order to add order');
+            }
+
+            document.querySelector('#pass').value = '';
+            document.querySelector('#num').value = '';
+            document.querySelector('#duration').value = '';
+            document.querySelector('#foodtoken').checked = false;
+
+        }
+
+        function placeOrder() {
+            window.alert('Thank you for your custom reservation!');
+            let items = document.querySelectorAll('.order-list-overall');
+            document.querySelector('#total').innerHTML = 0;
+            items.forEach(element => {
+                element.remove();
+            });
+
+        }
+
+        function addFavourite() {
+
+            let pass = document.querySelector('#pass').value;
+            let quantity = document.querySelector('#num').value;
+            if (pass !== '-' && quantity) {
+                localStorage.setItem('currentorder', JSON.stringify(currentitem));
+                window.alert('Added to favorite');
+            } else {
+                window.alert('Please fill in the fields in order to add favorites');
+            }
+
+
+        }
+
+        function orderFavourite() {
+            let retrievedObject = localStorage.getItem('currentorder');
+            let object = JSON.parse(retrievedObject);
+            currentitem.pass = object.pass;
+            currentitem.quantity = object.quantity;
+            currentitem.quantity = object.quantity;
+            currentitem.foodtoken = object.foodtoken;
+            currentitem.cost = object.cost;
+            addOrder();
+        }
+        let points = 0;
+
+        function checkLoyalty() {
+            let items = document.querySelectorAll('.order-list-overall');
+            let displaypoints = '';
+            if (items.length > 3) {
+                points = items.length * 20;
+                localStorage.setItem('points', points);
+                displaypoints = localStorage.getItem('points');
+                window.alert(`Your loyalty points are ${displaypoints}`);
+            } else {
+                // displaypoints = localStorage.getItem('points');
+                // window.alert(`Your loyalty points are ${displaypoints}`);
+                window.alert('You must have more than 3 orders to earn loyalty points');
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
